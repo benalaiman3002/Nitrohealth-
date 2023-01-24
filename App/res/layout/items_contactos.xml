@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txContacto"
+        android:layout_width="154dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:letterSpacing="0.1"
+        android:text="@string/contacto_1_items_contactos"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/ib_mapa"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ib_mapa"
+        android:layout_width="57dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/purple_200"
+        android:contentDescription="@string/image_contacte_items_contactos"
+        android:src="@drawable/personita"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:id="@+id/but_editarCont"
+        android:layout_width="57dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/purple_200"
+        android:contentDescription="@string/image_editar_items_contactos"
+        android:src="@drawable/editar"
+        app:layout_constraintStart_toEndOf="@+id/txContacto"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btn_elimCont"
+        android:layout_width="57dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toEndOf="@+id/but_editarCont"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/papelera"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#000000"
+        android:ems="10"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:text="@string/numero_items_contactos"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/but_editarCont"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toEndOf="@+id/ib_mapa"
+        app:layout_constraintTop_toBottomOf="@+id/txContacto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

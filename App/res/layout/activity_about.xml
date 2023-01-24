@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0e4fc"
+    tools:context=".activities.About">
+
+    <ImageButton
+        android:id="@+id/ib_retrocedir"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:background="#f0e4fc"
+        android:contentDescription="@string/retrocedir_about"
+        android:src="@drawable/flecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tv_aboutText"
+        android:layout_width="346dp"
+        android:layout_height="578dp"
+        android:text="@string/abouttext_about"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_retrocedir" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
