@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0e4fc"
+    tools:context=".fragments.CreacioMedicaments">
+
+
+    <Button
+        android:id="@+id/btn_AceptarMedicament"
+        android:layout_width="173dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="28dp"
+        android:text="@string/aceptar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_Cancelarmedicement"
+        app:layout_constraintTop_toBottomOf="@+id/lnl_Medicaments"
+        app:layout_constraintVertical_bias="0.612" />
+
+    <Button
+        android:id="@+id/btn_Cancelarmedicement"
+        android:layout_width="173dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lnl_Medicaments"
+        app:layout_constraintVertical_bias="0.612" />
+
+    <LinearLayout
+        android:id="@+id/lnl_Medicaments"
+        android:layout_width="388dp"
+        android:layout_height="582dp"
+        android:background="#FFF0E4FC"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.23000002">
+
+        <TextView
+            android:id="@+id/tv_NomMedicament"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nom_del_medicament"
+            android:textAlignment="viewStart"
+            android:textColor="#9575CD"
+            android:textSize="29sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/et_NomMedicament"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:backgroundTint="#9F9056D8"
+            android:ems="10"
+            android:hint="Nom"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="#000000"
+            android:textColorHint="#9F9056D8"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tv_Foto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/foto"
+            android:textAlignment="viewStart"
+            android:textColor="#9575CD"
+            android:textSize="29sp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:id="@+id/lnl_Foto"
+            android:layout_width="match_parent"
+            android:layout_height="101dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imb_m1"
+                android:layout_width="116dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/foto_medicament"
+                android:src="@drawable/pastilla" />
+
+            <ImageView
+                android:id="@+id/imb_m2"
+                android:layout_width="94dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/imatge_medicament2"
+                android:src="@drawable/injeccio" />
+
+            <ImageView
+                android:id="@+id/imb_m3"
+                android:layout_width="94dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/foto_medicament1"
+                android:src="@drawable/solucio" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_Dosis"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:letterSpacing="0.1"
+            android:text="@string/dossis"
+            android:textAlignment="viewStart"
+            android:textColor="#9575CD"
+            android:textSize="29sp"
+            android:textStyle="bold|italic" />
+
+        <RadioGroup
+            android:id="@+id/rg_Dosis"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="horizontal"
+            android:verticalScrollbarPosition="right">
+
+            <RadioButton
+                android:id="@+id/rb_Prota"
+                android:layout_width="128dp"
+                android:layout_height="64dp"
+                android:buttonTint="#000000"
+                android:text="@string/pastilla"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:verticalScrollbarPosition="defaultPosition"
+                tools:layout_editor_absoluteX="156dp"
+                tools:layout_editor_absoluteY="335dp" />
+
+            <RadioButton
+                android:id="@+id/rb_Trita"
+                android:layout_width="138dp"
+                android:layout_height="66dp"
+                android:buttonTint="#000000"
+                android:text="@string/injecci"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                tools:layout_editor_absoluteX="156dp"
+                tools:layout_editor_absoluteY="335dp" />
+
+            <RadioButton
+                android:id="@+id/rb_trota"
+                android:layout_width="134dp"
+                android:layout_height="66dp"
+                android:buttonTint="#000000"
+                android:text="@string/solucio"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                tools:layout_editor_absoluteX="156dp"
+                tools:layout_editor_absoluteY="335dp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_Quantitat"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:letterSpacing="0.1"
+            android:text="@string/quantitat"
+            android:textAlignment="viewStart"
+            android:textColor="#9575CD"
+            android:textSize="29sp"
+            android:textStyle="bold|italic" />
+
+        <Spinner
+            android:id="@+id/spn_Quantitat"
+            style="@style/SpinnerTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:background="@drawable/botones_redondos"
+            android:backgroundTint="#9575CD"
+            android:backgroundTintMode="add"
+            android:contentDescription="@string/about"
+            android:popupBackground="#EBBD9DF4"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <LinearLayout
+            android:id="@+id/lnl_Frecuencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_frecuencia"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:letterSpacing="0.1"
+                android:text="@string/frecuencia"
+                android:textAlignment="viewStart"
+                android:textColor="#9575CD"
+                android:textSize="29sp"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spn_Frequencia"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/botones_redondos"
+            android:backgroundTint="#9575CD"
+            android:backgroundTintMode="add"
+            android:contentDescription="@string/about"
+            android:popupBackground="#EBBD9DF4" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
